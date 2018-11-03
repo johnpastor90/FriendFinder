@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Answer the following questions and find true friendship</h1>
+          <p class="lead">Or face solitude! Yay!</p>
+        </div>
+      </div>
+</body>
+
+<script>
+        $.ajax({url: "/api/friends",method: "GET"}).then(function (friendsList){
+            console.log(friendsList);
+        });
+        $.ajax({url: "/api/friends",method: "POST",body:userData}).then(function (friendsList){
+            console.log(friendsList);
+        });
+    </script>
+
+</html>
